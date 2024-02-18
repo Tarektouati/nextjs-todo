@@ -17,8 +17,15 @@ Second, start a [PgSQL database container](https://hub.docker.com/_/postgres) by
 ```bash
 docker-compose up -d 
 ```
+Setup the database by running theses command
 
-Third, your almost good to go, run your NextJS dev server :
+
+```bash
+ npx prisma generate
+ npx prisma migrate dev
+```
+
+ your almost good to go, run your NextJS dev server :
 
 ```bash
 pnpm dev
@@ -35,6 +42,13 @@ To execute test, it simple just :
 
 ```bash
 pnpm test
+```
+
+For e2e test just run : 
+
+```bash
+pnpm e2e
+
 ```
 
 ***
