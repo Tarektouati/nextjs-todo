@@ -8,6 +8,7 @@ const config: UserConfig = {
     environment: "jsdom",
     setupFiles: "./vitest.setupFiles.ts",
     include: ["**/*.test.?(c|m)[jt]s?(x)"],
+    exclude: ["**/node_modules/**", "**/e2e/**"],
     sequence: { shuffle: true },
     passWithNoTests: false,
     coverage: {
